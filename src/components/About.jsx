@@ -1,14 +1,16 @@
+import { Section } from "./Section";
+
 function About() {
   return (
-    <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-2">About Me</h2>
-      <hr className="mb-2" />
-      <p>
-        Passionate developer with experience building scalable web Abouts using
-        React, Node.js, and Laravel. I love clean code and solving real-world
-        problems.
-      </p>
-    </section>
+    <Section title="About Me">
+      <div className="space-y-2 text-base font-light text-gray-700 dark:text-gray-300">
+        <p className="text-lg leading-relaxed font-light">
+          Passionate developer with experience building scalable web
+          applications using React, Node.js, and Laravel. I love clean code and
+          solving real-world problems.
+        </p>
+      </div>
+    </Section>
   );
 }
 

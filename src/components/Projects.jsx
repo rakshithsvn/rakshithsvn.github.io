@@ -1,26 +1,38 @@
+import { Section } from "./Section";
+
 function Projects() {
+  const projects = [
+    {
+      name: "ProjectHub",
+      description:
+        "Full-stack project management tool using React, Node.js, and MongoDB.",
+    },
+    {
+      name: "DevBlog",
+      description: "Markdown-powered blog for developers with custom themes.",
+    },
+    {
+      name: "InvoiceX",
+      description: "PDF invoice generator with Stripe payment integration.",
+    },
+  ];
+
   return (
-    <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-2">Projects</h2>
-      <hr className="mb-2" />
-      <div className="space-y-4">
-        <div>
-          <h3 className="font-bold">ProjectHub</h3>
-          <p>
-            Full-stack project management tool using React, Node.js, and
-            MongoDB.
-          </p>
-        </div>
-        <div>
-          <h3 className="font-bold">DevBlog</h3>
-          <p>Markdown-powered blog for developers with custom themes.</p>
-        </div>
-        <div>
-          <h3 className="font-bold">InvoiceX</h3>
-          <p>PDF invoice generator with Stripe payment integration.</p>
-        </div>
+    <Section title="Projects">
+      <div className="space-y-2 text-base font-light text-gray-700 dark:text-gray-300">
+        {projects.map((project) => (
+          <div
+            key={project.name}
+            className="p-4 rounded-md bg-white/60 dark:bg-gray-800/50 shadow hover:shadow-lg transition"
+          >
+            <h3 className="text-xl font-semibold">{project.name}</h3>
+            <p className="text-base font-light text-gray-700 dark:text-gray-300">
+              {project.description}
+            </p>
+          </div>
+        ))}
       </div>
-    </section>
+    </Section>
   );
 }
 

@@ -1,20 +1,28 @@
+import { Section } from "./Section";
+
 function Skills() {
+  const skills = [
+    "JavaScript",
+    "TypeScript",
+    "PHP",
+    "React",
+    "Laravel",
+    "Docker",
+    "MySQL",
+    "MongoDB",
+    "Tailwind CSS",
+  ];
+
   return (
-    <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-2">Skills</h2>
-      <hr className="mb-2" />
-      <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 list-disc pl-5">
-        <li>React</li>
-        <li>JavaScript</li>
-        <li>TypeScript</li>
-        <li>Laravel</li>
-        <li>PHP</li>
-        <li>MySQL</li>
-        <li>Python</li>
-        <li>VueJs</li>
-        <li>Tailwind CSS</li>
-      </ul>
-    </section>
+    <Section title="Skills">
+      <div className="space-y-2 text-base font-light text-gray-700 dark:text-gray-300">
+        <ul className="grid grid-cols-2 md:grid-cols-3 gap-2 list-disc pl-5 text-base font-medium">
+          {skills.map((skill) => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </ul>
+      </div>
+    </Section>
   );
 }
 

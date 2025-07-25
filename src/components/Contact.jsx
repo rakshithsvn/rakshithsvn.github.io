@@ -1,35 +1,43 @@
+import { Section } from "./Section";
+
 function Contact() {
   return (
-    <section className="mb-10">
-      <h2 className="text-xl font-semibold mb-2">Contact</h2>
-      <hr className="mb-2" />
-      <p>
-        Email:{" "}
-        <a href="mailto:rakshithsvn@gmail.com" className="text-blue-500">
-          rakshithsvn@gmail.com
-        </a>
-      </p>
-      <p>
-        GitHub:{" "}
-        <a href="https://github.com/rakshithsvn" className="text-blue-500">
-          github.com/rakshithsvn
-        </a>
-      </p>
-      <p>
-        LinkedIn:{" "}
-        <a
-          href="https://linkedin.com/in/rakshith-svn"
-          className="text-blue-500"
-        >
-          linkedin.com/in/rakshith-svn
-        </a>
-      </p>
-      <p>
-        <a href="/resume.pdf" className="text-blue-500">
-          Download Resume
-        </a>
-      </p>
-    </section>
+    <Section title="Contact">
+      <div className="space-y-2 text-base font-light text-gray-700 dark:text-gray-300">
+        <p className="text-base font-light">
+          Email:{" "}
+          <a
+            href="mailto:rakshithsvn@gmail.com"
+            className="text-blue-500 font-medium"
+          >
+            rakshithsvn@gmail.com
+          </a>
+        </p>
+        <p className="text-base font-light">
+          GitHub:{" "}
+          <a
+            href="https://github.com/rakshithsvn"
+            className="text-blue-500 font-medium"
+          >
+            github.com/rakshithsvn
+          </a>
+        </p>
+        <p className="text-base font-light">
+          LinkedIn:{" "}
+          <a
+            href="https://linkedin.com/in/rakshith-svn"
+            className="text-blue-500 font-medium"
+          >
+            linkedin.com/in/rakshith-svn
+          </a>
+        </p>
+        <p className="text-base font-light">
+          <a href="/resume.pdf" className="text-blue-500 font-medium">
+            Download Resume
+          </a>
+        </p>
+      </div>
+    </Section>
   );
 }
 
