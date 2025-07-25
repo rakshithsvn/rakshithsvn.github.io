@@ -1,7 +1,6 @@
-// src/App.jsx
 import { useState } from 'react';
 import { Sun, Moon } from 'lucide-react';
-import './App.css';
+import './index.css';
 
 function App() {
   const [darkMode, setDarkMode] = useState(false);
